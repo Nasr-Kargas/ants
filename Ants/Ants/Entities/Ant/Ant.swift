@@ -23,4 +23,15 @@ class Ant: DrawbleEntity{
     func startWalking(){
         self.startAnimationWithName("walk")
     }
+    
+    func moveWithDirectionVector(x: CGFloat, y: CGFloat){
+        self.position = CGPointMake(self.position.x + x, self.position.y + y);
+        
+        let dot = x
+        let det = y
+        let angle = atan2(det, dot)
+        let degreeAngle = (angle * 180) / CGFloat(M_PI)
+        self.zRotation = angle + CGFloat(M_PI_2);
+        
+    }
 }

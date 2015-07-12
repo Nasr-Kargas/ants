@@ -9,12 +9,12 @@
 import SpriteKit
 
 class GameScene: SKScene {
-    
+    let anAnt = Ant()
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
         self.backgroundColor = UIColor.whiteColor()
-        let anAnt = Ant()
-        let location = CGPointMake(30,30)
+
+        let location = CGPointMake(self.frame.width/2,self.frame.height/2)
         anAnt.startWalking()
         anAnt.position = location
         
@@ -43,5 +43,6 @@ class GameScene: SKScene {
    
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
+        anAnt.moveWithDirectionVector(0, y: 1)
     }
 }
