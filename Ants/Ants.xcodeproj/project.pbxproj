@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		CD0B2ADE1B51F97A0000A4B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B2ADD1B51F97A0000A4B9 /* AppDelegate.swift */; };
-		CD0B2AE01B51F97A0000A4B9 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = CD0B2ADF1B51F97A0000A4B9 /* GameScene.sks */; };
 		CD0B2AE21B51F97A0000A4B9 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B2AE11B51F97A0000A4B9 /* GameScene.swift */; };
 		CD0B2AE41B51F97A0000A4B9 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B2AE31B51F97A0000A4B9 /* GameViewController.swift */; };
 		CD0B2AE71B51F97A0000A4B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0B2AE51B51F97A0000A4B9 /* Main.storyboard */; };
 		CD0B2AE91B51F97A0000A4B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0B2AE81B51F97A0000A4B9 /* Images.xcassets */; };
 		CD0B2AEC1B51F97A0000A4B9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD0B2AEA1B51F97A0000A4B9 /* LaunchScreen.xib */; };
 		CD0B2AF81B51F97A0000A4B9 /* AntsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B2AF71B51F97A0000A4B9 /* AntsTests.swift */; };
+		CD0B2B031B51FA640000A4B9 /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B2B021B51FA640000A4B9 /* BaseEntity.swift */; };
+		CD0B2B051B51FA790000A4B9 /* DrawableEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B2B041B51FA790000A4B9 /* DrawableEntity.swift */; };
+		CD0B2B081B51FDC50000A4B9 /* Ant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B2B071B51FDC50000A4B9 /* Ant.swift */; };
+		CD0B2B0C1B520F0C0000A4B9 /* ant.atlas in Resources */ = {isa = PBXBuildFile; fileRef = CD0B2B0B1B520F0C0000A4B9 /* ant.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +34,6 @@
 		CD0B2AD81B51F97A0000A4B9 /* Ants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ants.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0B2ADC1B51F97A0000A4B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD0B2ADD1B51F97A0000A4B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD0B2ADF1B51F97A0000A4B9 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		CD0B2AE11B51F97A0000A4B9 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		CD0B2AE31B51F97A0000A4B9 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		CD0B2AE61B51F97A0000A4B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,6 +42,10 @@
 		CD0B2AF11B51F97A0000A4B9 /* AntsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AntsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0B2AF61B51F97A0000A4B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD0B2AF71B51F97A0000A4B9 /* AntsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntsTests.swift; sourceTree = "<group>"; };
+		CD0B2B021B51FA640000A4B9 /* BaseEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseEntity.swift; path = Entities/BaseEntity.swift; sourceTree = "<group>"; };
+		CD0B2B041B51FA790000A4B9 /* DrawableEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DrawableEntity.swift; path = Entities/DrawableEntity.swift; sourceTree = "<group>"; };
+		CD0B2B071B51FDC50000A4B9 /* Ant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ant.swift; path = Entities/Ant/Ant.swift; sourceTree = "<group>"; };
+		CD0B2B0B1B520F0C0000A4B9 /* ant.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = ant.atlas; path = Resources/ant.atlas; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +87,9 @@
 		CD0B2ADA1B51F97A0000A4B9 /* Ants */ = {
 			isa = PBXGroup;
 			children = (
+				CD0B2B091B520EF00000A4B9 /* Resources */,
+				CD0B2B011B51FA2E0000A4B9 /* Entities */,
 				CD0B2ADD1B51F97A0000A4B9 /* AppDelegate.swift */,
-				CD0B2ADF1B51F97A0000A4B9 /* GameScene.sks */,
 				CD0B2AE11B51F97A0000A4B9 /* GameScene.swift */,
 				CD0B2AE31B51F97A0000A4B9 /* GameViewController.swift */,
 				CD0B2AE51B51F97A0000A4B9 /* Main.storyboard */,
@@ -116,6 +123,40 @@
 				CD0B2AF61B51F97A0000A4B9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CD0B2B011B51FA2E0000A4B9 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CD0B2B061B51FDA90000A4B9 /* Ant */,
+				CD0B2B021B51FA640000A4B9 /* BaseEntity.swift */,
+				CD0B2B041B51FA790000A4B9 /* DrawableEntity.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		CD0B2B061B51FDA90000A4B9 /* Ant */ = {
+			isa = PBXGroup;
+			children = (
+				CD0B2B071B51FDC50000A4B9 /* Ant.swift */,
+			);
+			name = Ant;
+			sourceTree = "<group>";
+		};
+		CD0B2B091B520EF00000A4B9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CD0B2B0A1B520EFA0000A4B9 /* Sprites */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CD0B2B0A1B520EFA0000A4B9 /* Sprites */ = {
+			isa = PBXGroup;
+			children = (
+				CD0B2B0B1B520F0C0000A4B9 /* ant.atlas */,
+			);
+			name = Sprites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,8 +241,8 @@
 			files = (
 				CD0B2AEC1B51F97A0000A4B9 /* LaunchScreen.xib in Resources */,
 				CD0B2AE91B51F97A0000A4B9 /* Images.xcassets in Resources */,
-				CD0B2AE01B51F97A0000A4B9 /* GameScene.sks in Resources */,
 				CD0B2AE71B51F97A0000A4B9 /* Main.storyboard in Resources */,
+				CD0B2B0C1B520F0C0000A4B9 /* ant.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,8 +261,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD0B2AE21B51F97A0000A4B9 /* GameScene.swift in Sources */,
+				CD0B2B081B51FDC50000A4B9 /* Ant.swift in Sources */,
 				CD0B2AE41B51F97A0000A4B9 /* GameViewController.swift in Sources */,
+				CD0B2B051B51FA790000A4B9 /* DrawableEntity.swift in Sources */,
 				CD0B2ADE1B51F97A0000A4B9 /* AppDelegate.swift in Sources */,
+				CD0B2B031B51FA640000A4B9 /* BaseEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
